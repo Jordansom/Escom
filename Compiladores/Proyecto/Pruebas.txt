@@ -1,0 +1,29 @@
+#int main ( ) {
+         <<Comentario>>
+         <#int hola : 30 + 10;
+         <#int num1 : 3;
+         <#boolean var: true;
+         <#String nombre: "Ricardo";
+         if ( nombre :: "Ricardo" ){
+                  while (var &&  nombre :: "Ricardo" ){
+                           num1 +: 2;
+                           hola /: 2;
+                           var : false;
+                  }
+         }
+         else {
+                  <#int resultado : 5 + ( 6 * 8  - ( 134 / 76 ) * ( 5 + 8) ) ;
+                  #mostrar ( );
+                  #funcion ( resultado );
+         }
+         <#char[50]  corrimiento;
+         for(<#int recorrer :0 ; recorrer < 30 ; recorrer ++ ){
+                  corrimiento[recorrer] : 80 + recorrer;
+                  if( recorrer >: 15 ){
+                           do{
+                                    <#int retardo: 0;
+                                    retardo++;
+                           }while( retardo < 20);
+                  }
+         }
+}

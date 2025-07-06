@@ -1,0 +1,140 @@
+package codigo;
+
+import java_cup.runtime.Symbol;
+
+parser code
+{:
+    private Symbol s;
+    
+    public void syntax_error(Symbol s){
+        this.s = s;
+    }
+
+    public Symbol getS(){
+        return this.s;
+}
+:};
+
+terminal Comillas, T_dato, Int, Cadena, If, Else, Do, While, For,
+    Igual, Suma, Resta, Multiplicacion, Division, Op_logico, Op_relacional,
+    Op_atribucion, Op_incremento, Op_booleano, Parentesis_a, Parentesis_c,
+    Llave_a, Llave_c, Corchete_a, Corchete_c, Main, P_coma, Identificador,
+    Numero,Funcion,ERROR;
+non terminal INICIO, SENTENCIA, DECLARACION, DECLARACION_FOR, IF, IF_ELSE,
+    WHILE, DO_WHILE, FOR, SENTENCIA_BOOLEANA, SENTENCIA_LOGICA, SENTENCIA_LOGICA2,
+    SENTENCIA_FOR, FUNCION, OPERACION, PARAMETRO, ASIGNACION;
+         
+start with INICIO;
+
+INICIO ::= 
+    Int Main PARAMETRO Llave_a SENTENCIA Llave_c |
+    Main PARAMETRO Llave_a SENTENCIA Llave_c
+;
+PARAMETRO ::=
+    Parentesis_a Identificador Parentesis_c | 
+    Parentesis_a Parentesis_c
+;
+SENTENCIA ::= 
+   SENTENCIA DECLARACION |
+    DECLARACION |
+   SENTENCIA ASIGNACION |
+    ASIGNACION |
+   SENTENCIA IF | 
+    IF |
+   SENTENCIA IF_ELSE |
+    IF_ELSE |
+   SENTENCIA WHILE |
+    WHILE |
+   SENTENCIA DO_WHILE |
+    DO_WHILE |
+   SENTENCIA FOR |
+    FOR |
+   SENTENCIA FUNCION |
+    FUNCION
+;
+ASIGNACION ::=
+    Identificador Igual OPERACION P_coma |
+    Identificador Igual SENTENCIA_BOOLEANA P_coma |
+    Identificador Op_incremento P_coma | 
+    Identificador Op_atribucion OPERACION P_coma|
+
+    Identificador Corchete_a Numero Corchete_c Op_atribucion OPERACION P_coma |
+    Identificador Corchete_a Numero Corchete_c Igual OPERACION P_coma |
+    Identificador Corchete_a Numero Corchete_c Op_incremento P_coma | 
+
+    Identificador Corchete_a Identificador Corchete_c Op_atribucion OPERACION P_coma |
+    Identificador Corchete_a Identificador Corchete_c Igual OPERACION P_coma |
+    Identificador Corchete_a Identificador Corchete_c Op_incremento P_coma | 
+    
+    Identificador Op_atribucion Comillas Comillas P_coma |
+    Identificador Igual Comillas Comillas P_coma |
+    Identificador Op_atribucion Comillas Identificador Comillas P_coma |
+    Identificador Igual Comillas Identificador Comillas P_coma
+;
+DECLARACION ::= 
+    T_dato Identificador P_coma |
+    T_dato Identificador Igual OPERACION P_coma |
+    T_dato Identificador Igual  Op_booleano P_coma |
+
+    T_dato Corchete_a Numero Corchete_c Identificador P_coma |
+    T_dato Corchete_a Numero Corchete_c Identificador Igual OPERACION P_coma |
+
+    Cadena Identificador Igual Comillas Comillas P_coma |
+    Cadena Identificador Igual Comillas Identificador Comillas P_coma
+;
+OPERACION ::=
+    Numero |
+    Identificador |
+    Numero Suma OPERACION |
+    Numero Resta OPERACION |
+    Numero Multiplicacion OPERACION |
+    Numero Division OPERACION |
+    Identificador Suma OPERACION |
+    Identificador Resta OPERACION |
+    Identificador Multiplicacion OPERACION |
+    Identificador Division OPERACION |
+    Parentesis_a OPERACION Parentesis_c |
+    Parentesis_a OPERACION Parentesis_c Suma OPERACION |
+    Parentesis_a OPERACION Parentesis_c Resta OPERACION |
+    Parentesis_a OPERACION Parentesis_c Multiplicacion OPERACION |
+    Parentesis_a OPERACION Parentesis_c Division OPERACION
+;
+IF ::= If Parentesis_a SENTENCIA_LOGICA Parentesis_c Llave_a SENTENCIA Llave_c
+;
+SENTENCIA_LOGICA ::= 
+    SENTENCIA_BOOLEANA | 
+    SENTENCIA_BOOLEANA Op_logico SENTENCIA_LOGICA2 |
+    Identificador Op_logico SENTENCIA_LOGICA2
+;
+SENTENCIA_LOGICA2 ::= 
+    SENTENCIA_BOOLEANA | 
+    Identificador |
+    Op_logico SENTENCIA_LOGICA2
+;
+SENTENCIA_BOOLEANA ::= 
+    Op_booleano | 
+    Identificador Op_relacional Op_booleano |
+    Identificador Op_relacional Numero |
+    Identificador Op_relacional Identificador |
+    Identificador Op_relacional Comillas Comillas |
+    Identificador Op_relacional Comillas Identificador Comillas
+;
+IF_ELSE ::= If Parentesis_a SENTENCIA_LOGICA Parentesis_c Llave_a SENTENCIA Llave_c Else Llave_a SENTENCIA Llave_c
+;
+WHILE ::= While Parentesis_a SENTENCIA_LOGICA Parentesis_c Llave_a SENTENCIA Llave_c
+;
+DO_WHILE ::= Do Llave_a SENTENCIA Llave_c While Parentesis_a SENTENCIA_LOGICA Parentesis_c P_coma
+;
+FOR ::= For Parentesis_a SENTENCIA_FOR Parentesis_c Llave_a SENTENCIA Llave_c
+;
+SENTENCIA_FOR ::=
+    T_dato Identificador Igual Numero P_coma SENTENCIA_BOOLEANA P_coma DECLARACION_FOR |
+    Identificador Igual Numero P_coma SENTENCIA_BOOLEANA P_coma DECLARACION_FOR
+;
+DECLARACION_FOR ::= 
+    Identificador Op_atribucion Numero |
+    Identificador Op_incremento
+;
+FUNCION ::=
+    Funcion PARAMETRO P_coma
+;
