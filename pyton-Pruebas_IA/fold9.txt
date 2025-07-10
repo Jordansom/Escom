@@ -1,0 +1,15 @@
+Entrada: [7.7 3.  6.1 2.3]	Etiqueta: 2
+Entrada: [6.3 3.4 5.6 2.4]	Etiqueta: 2
+Entrada: [6.4 3.1 5.5 1.8]	Etiqueta: 2
+Entrada: [6.  3.  4.8 1.8]	Etiqueta: 2
+Entrada: [6.9 3.1 5.4 2.1]	Etiqueta: 2
+Entrada: [6.7 3.1 5.6 2.4]	Etiqueta: 2
+Entrada: [6.9 3.1 5.1 2.3]	Etiqueta: 2
+Entrada: [5.8 2.7 5.1 1.9]	Etiqueta: 2
+Entrada: [6.8 3.2 5.9 2.3]	Etiqueta: 2
+Entrada: [6.7 3.3 5.7 2.5]	Etiqueta: 2
+Entrada: [6.7 3.  5.2 2.3]	Etiqueta: 2
+Entrada: [6.3 2.5 5.  1.9]	Etiqueta: 2
+Entrada: [6.5 3.  5.2 2. ]	Etiqueta: 2
+Entrada: [6.2 3.4 5.4 2.3]	Etiqueta: 2
+Entrada: [5.9 3.  5.1 1.8]	Etiqueta: 2
