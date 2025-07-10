@@ -1,0 +1,33 @@
+fun main() {
+    val arreglo1 = arrayOf("Kotlin", "Lenguaje", "Programacion", "Movil", "Aprendizaje")
+    val arreglo2 = arrayOf("DIVERSION", "EFICIENCIA", "MOVIL", "CODIGO", "DESARROLLO")
+
+    println("Cadenas de arreglo1 en mayúsculas:")
+    arreglo1.map { it.uppercase() }.forEach { println(it) }
+
+    println("\nCadenas de arreglo2 en minúsculas:")
+    arreglo2.map { it.lowercase() }.forEach { println(it) }
+
+     println("\nVerificación de contenido entre ambos arreglos:")
+    val comun = arreglo1.filter { cadena -> arreglo2.any { it.equals(cadena, ignoreCase = true) } }
+
+    if (comun.isNotEmpty()) {
+        println("Las siguientes cadenas se repiten en ambos arreglos: ${comun.joinToString(", ")}")
+    } else {
+        println("No hay cadenas comunes entre ambos arreglos.")
+    }
+
+    println("\nNúmero de vocales en las cadenas de ambos arreglos:")
+    val vocales = listOf('a', 'e', 'i', 'o', 'u')
+
+    fun contarVocales(cadena: String) {
+        val conteo = vocales.map { vocal -> vocal to cadena.lowercase().count { it == vocal } }.toMap()
+        println("Cadena: $cadena -> $conteo")
+    }
+
+    println("\nVocales en arreglo1:")
+    arreglo1.forEach { contarVocales(it) }
+
+    println("\nVocales en arreglo2:")
+    arreglo2.forEach { contarVocales(it) }
+}

@@ -1,0 +1,133 @@
+<TextView
+        android:id="@+id/txt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Datos de Registro"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.106" />
+
+    <Button
+        android:id="@+id/bt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="99dp"
+        android:layout_marginEnd="161dp"
+        android:layout_marginBottom="15dp"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt1"
+        app:layout_constraintVertical_bias="0.867" />
+
+    <EditText
+        android:id="@+id/txtnombre"
+        android:layout_width="222dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Nombre"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt1" />
+
+    <EditText
+        android:id="@+id/txtapellidos"
+        android:layout_width="206dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="60dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Apellidos"
+        app:layout_constraintBottom_toTopOf="@+id/txtemail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtnombre"
+        app:layout_constraintTop_toBottomOf="@+id/txt1" />
+
+    <EditText
+        android:id="@+id/txtemail"
+        android:layout_width="335dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="216dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:text="Email"
+        app:layout_constraintBottom_toTopOf="@+id/bt1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtnombre"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/txtfecha"
+        android:layout_width="214dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="21dp"
+        android:ems="10"
+        android:inputType="date"
+        android:text="fecha de Naciemiento"
+        app:layout_constraintBottom_toTopOf="@+id/bt1"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Switch
+        android:id="@+id/swtrabajo"
+        android:layout_width="180dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="41dp"
+        android:text="Trabajo"
+        app:layout_constraintBottom_toTopOf="@+id/txtfecha"
+        app:layout_constraintEnd_toStartOf="@+id/swdeporte"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Switch
+        android:id="@+id/swdeporte"
+        android:layout_width="184dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="41dp"
+        android:text="Deporte"
+        app:layout_constraintBottom_toTopOf="@+id/txtfecha"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/swtrabajo" />
+
+    <EditText
+        android:id="@+id/txtllenado"
+        android:layout_width="194dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:inputType="date"
+        android:text="Fecha de llenado"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/txttiempo"
+        android:layout_width="179dp"
+        android:layout_height="49dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="21dp"
+        android:ems="10"
+        android:inputType="time"
+        android:text="Tiempo de llenado"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
