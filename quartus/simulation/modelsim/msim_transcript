@@ -1,0 +1,79 @@
+# Reading pref.tcl
+# do Sumadores_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/Jordan/Documents/quartus {C:/Users/Jordan/Documents/quartus/Sumadores.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:00:43 on Apr 28,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Jordan/Documents/quartus" C:/Users/Jordan/Documents/quartus/Sumadores.v 
+# -- Compiling module sumador4bits
+# -- Compiling module sumador4bits_tb
+# ** Warning: C:/Users/Jordan/Documents/quartus/Sumadores.v(40): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: C:/Users/Jordan/Documents/quartus/Sumadores.v(41): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: C:/Users/Jordan/Documents/quartus/Sumadores.v(45): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: C:/Users/Jordan/Documents/quartus/Sumadores.v(45): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: C:/Users/Jordan/Documents/quartus/Sumadores.v(47): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: C:/Users/Jordan/Documents/quartus/Sumadores.v(47): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: C:/Users/Jordan/Documents/quartus/Sumadores.v(49): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: C:/Users/Jordan/Documents/quartus/Sumadores.v(49): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: C:/Users/Jordan/Documents/quartus/Sumadores.v(51): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: C:/Users/Jordan/Documents/quartus/Sumadores.v(51): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: C:/Users/Jordan/Documents/quartus/Sumadores.v(53): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: C:/Users/Jordan/Documents/quartus/Sumadores.v(53): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: C:/Users/Jordan/Documents/quartus/Sumadores.v(55): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: C:/Users/Jordan/Documents/quartus/Sumadores.v(55): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: C:/Users/Jordan/Documents/quartus/Sumadores.v(57): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: C:/Users/Jordan/Documents/quartus/Sumadores.v(57): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: C:/Users/Jordan/Documents/quartus/Sumadores.v(59): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: C:/Users/Jordan/Documents/quartus/Sumadores.v(59): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# Top level modules:
+# 	sumador4bits_tb
+# End time: 18:00:44 on Apr 28,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 18
+# vlog -vlog01compat -work work +incdir+C:/Users/Jordan/Documents/quartus {C:/Users/Jordan/Documents/quartus/mediosumador.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:00:44 on Apr 28,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Jordan/Documents/quartus" C:/Users/Jordan/Documents/quartus/mediosumador.v 
+# -- Compiling module mediosumador
+# -- Compiling module mediosumador_tb
+# 
+# Top level modules:
+# 	mediosumador_tb
+# End time: 18:00:44 on Apr 28,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Jordan/Documents/quartus {C:/Users/Jordan/Documents/quartus/sumadorcompleto.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:00:45 on Apr 28,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Jordan/Documents/quartus" C:/Users/Jordan/Documents/quartus/sumadorcompleto.v 
+# -- Compiling module Sumadorcompleto
+# -- Compiling module Sumadorcompleto_tb
+# 
+# Top level modules:
+# 	Sumadorcompleto_tb
+# End time: 18:00:45 on Apr 28,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.sumador4bits_tb
+# vsim work.sumador4bits_tb 
+# Start time: 18:00:57 on Apr 28,2023
+# Loading work.sumador4bits_tb
+# Loading work.sumador4bits
+# Loading work.Sumadorcompleto
+# Loading work.mediosumador
+add wave -position insertpoint sim:/sumador4bits_tb/*
+run
+# ** Note: $finish    : C:/Users/Jordan/Documents/quartus/Sumadores.v(61)
+#    Time: 90 ps  Iteration: 0  Instance: /sumador4bits_tb
+# 1
+# Break in Module sumador4bits_tb at C:/Users/Jordan/Documents/quartus/Sumadores.v line 61
+# End time: 18:02:05 on Apr 28,2023, Elapsed time: 0:01:08
+# Errors: 0, Warnings: 0

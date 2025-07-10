@@ -1,0 +1,236 @@
+|sumador4bits
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+a[4] => a[4].IN1
+a[5] => a[5].IN1
+a[6] => a[6].IN1
+a[7] => a[7].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+b[4] => b[4].IN1
+b[5] => b[5].IN1
+b[6] => b[6].IN1
+b[7] => b[7].IN1
+sum[0] <= Sumadorcompleto:fa0.port3
+sum[1] <= Sumadorcompleto:fa1.port3
+sum[2] <= Sumadorcompleto:fa2.port3
+sum[3] <= Sumadorcompleto:fa3.port3
+sum[4] <= Sumadorcompleto:fa4.port3
+sum[5] <= Sumadorcompleto:fa5.port3
+sum[6] <= Sumadorcompleto:fa6.port3
+sum[7] <= Sumadorcompleto:fa7.port3
+Fcarry <= carry[6].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sumador4bits|Sumadorcompleto:fa0
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= mediosumador:ha2.port2
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sumador4bits|Sumadorcompleto:fa0|mediosumador:ha1
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sumador4bits|Sumadorcompleto:fa0|mediosumador:ha2
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sumador4bits|Sumadorcompleto:fa1
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= mediosumador:ha2.port2
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sumador4bits|Sumadorcompleto:fa1|mediosumador:ha1
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sumador4bits|Sumadorcompleto:fa1|mediosumador:ha2
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sumador4bits|Sumadorcompleto:fa2
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= mediosumador:ha2.port2
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sumador4bits|Sumadorcompleto:fa2|mediosumador:ha1
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sumador4bits|Sumadorcompleto:fa2|mediosumador:ha2
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sumador4bits|Sumadorcompleto:fa3
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= mediosumador:ha2.port2
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sumador4bits|Sumadorcompleto:fa3|mediosumador:ha1
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sumador4bits|Sumadorcompleto:fa3|mediosumador:ha2
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sumador4bits|Sumadorcompleto:fa4
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= mediosumador:ha2.port2
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sumador4bits|Sumadorcompleto:fa4|mediosumador:ha1
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sumador4bits|Sumadorcompleto:fa4|mediosumador:ha2
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sumador4bits|Sumadorcompleto:fa5
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= mediosumador:ha2.port2
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sumador4bits|Sumadorcompleto:fa5|mediosumador:ha1
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sumador4bits|Sumadorcompleto:fa5|mediosumador:ha2
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sumador4bits|Sumadorcompleto:fa6
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= mediosumador:ha2.port2
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sumador4bits|Sumadorcompleto:fa6|mediosumador:ha1
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sumador4bits|Sumadorcompleto:fa6|mediosumador:ha2
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sumador4bits|Sumadorcompleto:fa7
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= mediosumador:ha2.port2
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sumador4bits|Sumadorcompleto:fa7|mediosumador:ha1
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sumador4bits|Sumadorcompleto:fa7|mediosumador:ha2
+a => sum.IN0
+a => carry.IN0
+b => sum.IN1
+b => carry.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+

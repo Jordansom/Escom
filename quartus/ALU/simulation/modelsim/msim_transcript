@@ -1,0 +1,56 @@
+# Reading pref.tcl
+# do ALU_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/Jordan/Documents/quartus/ALU {C:/Users/Jordan/Documents/quartus/ALU/ALU.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:54:12 on Jun 04,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Jordan/Documents/quartus/ALU" C:/Users/Jordan/Documents/quartus/ALU/ALU.v 
+# -- Compiling module ALU
+# -- Compiling module ALU_tb
+# 
+# Top level modules:
+# 	ALU_tb
+# End time: 09:54:13 on Jun 04,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+vsim work.ALU_tb
+# vsim work.ALU_tb 
+# Start time: 09:54:23 on Jun 04,2023
+# Loading work.ALU_tb
+# Loading work.ALU
+vsim work.ALU_tb
+# End time: 09:54:38 on Jun 04,2023, Elapsed time: 0:00:15
+# Errors: 0, Warnings: 0
+# vsim work.ALU_tb 
+# Start time: 09:54:38 on Jun 04,2023
+# Loading work.ALU_tb
+# Loading work.ALU
+add wave -position insertpoint sim:/ALU_tb/*
+run
+# Suma: Resultado =    15, Esperado = 15, PASSED
+# Resta: Resultado =     5, Esperado = 5, PASSED
+# Multiplicación: Resultado =    50, Esperado = 50, PASSED
+run
+# AND lógico: Resultado =     0, Esperado = 0, PASSED
+# OR lógico: Resultado =    15, Esperado = 15, PASSED
+# XOR lógico: Resultado =    15, Esperado = 15, PASSED
+run
+# NOP: Resultado =     0, Esperado = 0, PASSED
+# ** Note: $finish    : C:/Users/Jordan/Documents/quartus/ALU/ALU.v(138)
+#    Time: 220 ps  Iteration: 0  Instance: /ALU_tb
+# 1
+# Break in Module ALU_tb at C:/Users/Jordan/Documents/quartus/ALU/ALU.v line 138
+run
+run
+run
+# End time: 09:57:33 on Jun 04,2023, Elapsed time: 0:02:55
+# Errors: 0, Warnings: 0

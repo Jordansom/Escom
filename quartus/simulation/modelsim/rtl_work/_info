@@ -1,0 +1,157 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Jordan/Documents/quartus/simulation/modelsim
+vmediosumador
+Z1 !s110 1682697644
+!i10b 1
+!s100 R47e;f:1bD4]1BIR;<X553
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+ILNO[hWF5gCfkL_a9FimG@0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z4 w1682692631
+Z5 8C:/Users/Jordan/Documents/quartus/mediosumador.v
+Z6 FC:/Users/Jordan/Documents/quartus/mediosumador.v
+!i122 1
+L0 1 10
+Z7 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z8 !s108 1682697644.000000
+Z9 !s107 C:/Users/Jordan/Documents/quartus/mediosumador.v|
+Z10 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Jordan/Documents/quartus|C:/Users/Jordan/Documents/quartus/mediosumador.v|
+!i113 1
+Z11 o-vlog01compat -work work
+Z12 !s92 -vlog01compat -work work +incdir+C:/Users/Jordan/Documents/quartus
+Z13 tCvgOpt 0
+vmediosumador_tb
+R1
+!i10b 1
+!s100 M5i@C95F<VeBE09=L0Y7o1
+R2
+I@@GO;NjUf@;_@A8V]O1f@1
+R3
+R0
+R4
+R5
+R6
+!i122 1
+L0 12 27
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+R13
+vsumador4bits
+R1
+!i10b 1
+!s100 B23cnIgG0zb[c0PeS[QEK3
+R2
+I;<>Z_4ONKQ<XoXb5z<Nd13
+R3
+R0
+Z14 w1682697396
+Z15 8C:/Users/Jordan/Documents/quartus/Sumadores.v
+Z16 FC:/Users/Jordan/Documents/quartus/Sumadores.v
+!i122 0
+L0 1 18
+R7
+r1
+!s85 0
+31
+Z17 !s108 1682697643.000000
+Z18 !s107 C:/Users/Jordan/Documents/quartus/Sumadores.v|
+Z19 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Jordan/Documents/quartus|C:/Users/Jordan/Documents/quartus/Sumadores.v|
+!i113 1
+R11
+R12
+R13
+vsumador4bits_tb
+R1
+!i10b 1
+!s100 [^:9j=e=VMCKELQh^T<KW3
+R2
+IdUncELnz9eMCYk3zK2>Re2
+R3
+R0
+R14
+R15
+R16
+!i122 0
+L0 20 44
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!i113 1
+R11
+R12
+R13
+vSumadorcompleto
+Z20 !s110 1682697645
+!i10b 1
+!s100 ]X?D:I03lhEAP2j9`InL10
+R2
+IFj[bj5BLD^WagBW5Gck1H2
+R3
+R0
+Z21 w1682694211
+Z22 8C:/Users/Jordan/Documents/quartus/sumadorcompleto.v
+Z23 FC:/Users/Jordan/Documents/quartus/sumadorcompleto.v
+!i122 2
+L0 1 13
+R7
+r1
+!s85 0
+31
+Z24 !s108 1682697645.000000
+!s107 C:/Users/Jordan/Documents/quartus/sumadorcompleto.v|
+Z25 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Jordan/Documents/quartus|C:/Users/Jordan/Documents/quartus/sumadorcompleto.v|
+!i113 1
+R11
+R12
+R13
+n@sumadorcompleto
+vSumadorcompleto_tb
+R20
+!i10b 1
+!s100 BN[ZH9?0]HIJTLO:_G:Z?0
+R2
+IOTkJ>Y3?eM@jSK0<g@RUV2
+R3
+R0
+R21
+R22
+R23
+!i122 2
+L0 15 46
+R7
+r1
+!s85 0
+31
+R24
+Z26 !s107 C:/Users/Jordan/Documents/quartus/sumadorcompleto.v|
+R25
+!i113 1
+R11
+R12
+R13
+n@sumadorcompleto_tb
